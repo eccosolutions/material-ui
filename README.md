@@ -1,3 +1,10 @@
+#### UMD Packaging
+For AMD support, do the following, and then use the files written to lib/ folder
+
+    npm install
+    webpack
+
+
 #### Note
 
 For *how-to* questions and other non-issues,
