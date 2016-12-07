@@ -4,6 +4,14 @@ For AMD support, do the following, and then use the files written to lib/ folder
     npm install
     webpack
 
+    webpack --progress --optimize-minimize --colors --entry ./src/index.ecco.js
+
+Second one will use our custom entry point to give a smaller file
+
+To see what's going on under the hood, try:
+
+    webpack --display-reasons --display-modules --progress --optimize-minimize --colors --entry ./src/index.ecco.js
+
 
 #### Note
 
