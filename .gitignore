@@ -6,6 +6,7 @@ coverage
 
 # Exclude compiled files
 /lib
+/dist
 icon-builder/js
 icon-builder/jsx
 
