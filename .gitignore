@@ -6,6 +6,7 @@ coverage
 
 # Exclude compiled files
 /lib
+/dist
 icon-builder/js
 icon-builder/jsx
 
@@ -18,3 +19,4 @@ jsconfig.json
 # OS files
 .DS_STORE
 yarn.lock
+*~
