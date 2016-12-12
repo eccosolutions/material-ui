@@ -6,25 +6,25 @@ var libraryName = 'material-ui';
 var outputFile = libraryName + '.js';
 
 var config = {
+//  entry: __dirname + '/src/index.js',
+// Below is how chunks would be configured, but overrides --output-filename
   entry: {
-    "material-ui": __dirname + '/src/index.ecco.js', // We're using this to manually select which modules we consume and therefore want packaging
-//    "react" : "react"
+    "material-ui": __dirname + '/src/index.js',
   },
   devtool: 'source-map',
   output: {
-    path: __dirname + '/lib',
+    path: __dirname + '/dist',
     filename: outputFile,
     library: libraryName,
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
     externals: [
-        "react",
 	"react-addons-create-fragment",
 	"react-addons-transition-group",
 	{   
-            "React" : {
-		root: "react",
+            "react" : {
+		root: "React",
                 commonjs2: "./react",
                 commonjs: ["./react"],
 		amd: "react"
@@ -32,7 +32,7 @@ var config = {
         },
         {
             "react-dom": {
-                root: "react-dom",
+                root: "ReactDOM",
                 commonjs2: "./react-dom",
                 commonjs: ["./react-dom"],
                 amd: "react-dom"
