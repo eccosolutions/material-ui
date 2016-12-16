@@ -76,6 +76,12 @@ class Snackbar extends Component {
      */
     onActionTouchTap: PropTypes.func,
     /**
+     * Fired when the action button is clicked.
+     *
+     * @param {object} event Action button event.
+     */
+    onActionClick: PropTypes.func,
+    /**
      * Fired when the `Snackbar` is requested to be closed by a click outside the `Snackbar`, or after the
      * `autoHideDuration` timer expires.
      *
@@ -204,6 +210,7 @@ class Snackbar extends Component {
       message: messageProp, // eslint-disable-line no-unused-vars
       onRequestClose, // eslint-disable-line no-unused-vars
       onActionTouchTap,
+      onActionClick,
       style,
       ...other
     } = this.props;
@@ -226,6 +233,7 @@ class Snackbar extends Component {
             message={message}
             open={open}
             onActionTouchTap={onActionTouchTap}
+            onActionClick={onActionClick}
             style={bodyStyle}
           />
         </div>
