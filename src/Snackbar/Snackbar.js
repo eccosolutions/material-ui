@@ -77,6 +77,12 @@ class Snackbar extends Component {
      */
     onActionClick: PropTypes.func,
     /**
+     * Fired when the action button is clicked.
+     *
+     * @param {object} event Action button event.
+     */
+    onActionClick: PropTypes.func,
+    /**
      * Fired when the `Snackbar` is requested to be closed by a click outside the `Snackbar`, or after the
      * `autoHideDuration` timer expires.
      *

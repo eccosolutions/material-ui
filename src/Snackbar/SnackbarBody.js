@@ -120,6 +120,12 @@ SnackbarBody.propTypes = {
    */
   onActionClick: PropTypes.func,
   /**
+   * Fired when the action button is clicked.
+   *
+   * @param {object} event Action button event.
+   */
+  onActionClick: PropTypes.func,
+  /**
    * @ignore
    * Controls whether the `Snackbar` is opened or not.
    */
