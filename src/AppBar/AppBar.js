@@ -210,7 +210,7 @@ class AppBar extends Component {
     const titleComponent = typeof title === 'string' || title instanceof String ? 'h1' : 'div';
 
     const titleElement = React.createElement(titleComponent, {
-      onTouchTap: this.handleTitleTouchTap,
+      onClick: this.handleTitleTouchTap,
       style: prepareStyles(Object.assign(styles.title, styles.mainElement, titleStyle)),
     }, title);
 

@@ -107,7 +107,7 @@ describe('<AppBar />', () => {
         <AppBar onLeftIconButtonTouchTap={onLeftIconButtonTouchTap} />
       );
 
-      wrapper.find(IconButton).simulate('touchTap');
+      wrapper.find(IconButton).simulate('click');
       assert.strictEqual(onLeftIconButtonTouchTap.callCount, 1,
         'should have called onLeftIconButtonTouchTap callback function');
     });

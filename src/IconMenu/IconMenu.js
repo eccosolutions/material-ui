@@ -309,7 +309,7 @@ You should wrapped it with an <IconButton />.`);
         onMouseLeave={onMouseLeave}
         onMouseEnter={onMouseEnter}
         onMouseUp={onMouseUp}
-        onTouchTap={onTouchTap}
+        onClick={onTouchTap}
         style={prepareStyles(mergedRootStyles)}
       >
         {iconButton}

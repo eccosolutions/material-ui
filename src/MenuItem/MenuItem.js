@@ -186,7 +186,7 @@ class MenuItem extends Component {
 
   cloneMenuItem = (item) => {
     return React.cloneElement(item, {
-      onTouchTap: (event) => {
+      onClick: (event) => {
         if (!item.props.menuItems) {
           this.handleRequestClose();
         }

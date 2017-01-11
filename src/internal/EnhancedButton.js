@@ -74,7 +74,7 @@ class EnhancedButton extends Component {
   static defaultProps = {
     containerElement: 'button',
     onBlur: () => {},
-    onClick: () => {},
+    onClick: null, //() => {},
     onFocus: () => {},
     onKeyDown: () => {},
     onKeyUp: () => {},
@@ -242,7 +242,8 @@ class EnhancedButton extends Component {
   handleClick = (event) => {
     if (!this.props.disabled) {
       tabPressed = false;
-      this.props.onClick(event);
+      this.props.onTouchTap(event);
+      // (this.props.onClick || this.props.onTouchTap)(event);
     }
   };
 
@@ -339,7 +340,6 @@ class EnhancedButton extends Component {
       onFocus: this.handleFocus,
       onKeyUp: this.handleKeyUp,
       onKeyDown: this.handleKeyDown,
-      onTouchTap: this.handleTouchTap,
       tabIndex: disabled || disableKeyboardFocus ? -1 : tabIndex,
     };
 

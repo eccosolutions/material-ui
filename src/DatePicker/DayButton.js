@@ -121,7 +121,7 @@ class DayButton extends Component {
         onKeyboardFocus={this.handleKeyboardFocus}
         onMouseEnter={this.handleMouseEnter}
         onMouseLeave={this.handleMouseLeave}
-        onTouchTap={this.handleTouchTap}
+        onClick={this.handleTouchTap}
         style={styles.root}
       >
         <div style={prepareStyles(styles.buttonState)} />

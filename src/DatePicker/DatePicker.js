@@ -288,7 +288,7 @@ class DatePicker extends Component {
         <TextField
           {...other}
           onFocus={this.handleFocus}
-          onTouchTap={this.handleTouchTap}
+          onClick={this.handleTouchTap}
           ref="input"
           style={textFieldStyle}
           value={this.state.date ? formatDate(this.state.date) : ''}

@@ -120,7 +120,7 @@ class AppNavDrawer extends Component {
         onRequestChange={onRequestChangeNavDrawer}
         containerStyle={{zIndex: zIndex.drawer - 100}}
       >
-        <div style={styles.logo} onTouchTap={this.handleTouchTapHeader}>
+        <div style={styles.logo} onClick={this.handleTouchTapHeader}>
           Material-UI
         </div>
         <span style={styles.version}>Version:</span>

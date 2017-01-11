@@ -75,6 +75,7 @@ class Overlay extends Component {
     const {prepareStyles} = this.context.muiTheme;
     const styles = getStyles(this.props, this.context);
 
+    other.onClick = other.onClick || other.onTouchTap;
     return (
       <div {...other} ref="overlay" style={prepareStyles(Object.assign(styles.root, style))}>
         {autoLockScrolling && <AutoLockScrolling lock={show} />}

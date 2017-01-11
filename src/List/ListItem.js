@@ -615,7 +615,7 @@ class ListItem extends Component {
         onKeyboardFocus: this.handleRightIconButtonKeyboardFocus,
         onMouseEnter: this.handleRightIconButtonMouseEnter,
         onMouseLeave: this.handleRightIconButtonMouseLeave,
-        onTouchTap: this.handleRightIconButtonTouchTap,
+        onClick: this.handleRightIconButtonTouchTap,
         onMouseDown: this.handleRightIconButtonMouseUp,
         onMouseUp: this.handleRightIconButtonMouseUp,
       };
@@ -625,7 +625,7 @@ class ListItem extends Component {
         rightIconButtonElement = this.state.open ?
           <IconButton><OpenIcon /></IconButton> :
           <IconButton><CloseIcon /></IconButton>;
-        rightIconButtonHandlers.onTouchTap = this.handleNestedListToggle;
+        rightIconButtonHandlers.onClick = this.handleNestedListToggle;
       }
 
       this.pushElement(
@@ -684,7 +684,7 @@ class ListItem extends Component {
               onMouseEnter={this.handleMouseEnter}
               onTouchStart={this.handleTouchStart}
               onTouchEnd={this.handleTouchEnd}
-              onTouchTap={primaryTogglesNestedList ? this.handleNestedListToggle : onTouchTap}
+              onClick={primaryTogglesNestedList ? this.handleNestedListToggle : onTouchTap}
               ref="enhancedButton"
               style={Object.assign({}, styles.root, style)}
             >

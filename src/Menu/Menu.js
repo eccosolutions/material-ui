@@ -260,7 +260,7 @@ class Menu extends Component {
     return React.cloneElement(child, {
       desktop: desktop,
       focusState: focusState,
-      onTouchTap: (event) => {
+      onClick: (event) => {
         this.handleMenuItemTouchTap(event, child, index);
         if (child.props.onTouchTap) child.props.onTouchTap(event);
       },

@@ -41,7 +41,7 @@ const TextFieldLabel = (props) => {
       className={className}
       style={prepareStyles(styles.root)}
       htmlFor={htmlFor}
-      onTouchTap={onTouchTap}
+      onClick={onTouchTap}
     >
       {children}
     </label>
