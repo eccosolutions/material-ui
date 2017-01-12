@@ -395,7 +395,7 @@ class RaisedButton extends Component {
 
     const enhancedButtonChildren = createChildFragment(childrenFragment);
 
-    other.onClick = other.onClick || other.onTouchTap; // onTouchTap isn't supported, so if specified, use for onClick
+    other.onClick = other.onClick || other.onClick; // onClick isn't supported, so if specified, use for onClick
 
     return (
       <Paper

@@ -29,8 +29,8 @@ export const makeSelectable = (MyComponent) => {
         return React.cloneElement(child, {
           onClick: (event) => {
             this.handleItemTouchTap(event, child);
-            if (child.props.onTouchTap) {
-              child.props.onTouchTap(event);
+            if (child.props.onClick) {
+              child.props.onClick(event);
             }
           },
           key: this.keyIndex,

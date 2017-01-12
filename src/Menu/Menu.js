@@ -262,7 +262,7 @@ class Menu extends Component {
       focusState: focusState,
       onClick: (event) => {
         this.handleMenuItemTouchTap(event, child, index);
-        if (child.props.onTouchTap) child.props.onTouchTap(event);
+        if (child.props.onClick) child.props.onClick(event);
       },
       ref: isFocused ? 'focusedMenuItem' : null,
       style: mergedChildrenStyles,

@@ -32,7 +32,7 @@ class CalendarMonth extends Component {
     locale: PropTypes.string.isRequired,
     maxDate: PropTypes.object,
     minDate: PropTypes.object,
-    onTouchTapDay: PropTypes.func,
+    onClickDay: PropTypes.func,
     selectedDate: PropTypes.object.isRequired,
     shouldDisableDate: PropTypes.func,
   };
@@ -42,8 +42,8 @@ class CalendarMonth extends Component {
   }
 
   handleTouchTapDay = (event, date) => {
-    if (this.props.onTouchTapDay) {
-      this.props.onTouchTapDay(event, date);
+    if (this.props.onClickDay) {
+      this.props.onClickDay(event, date);
     }
   };
 
@@ -90,7 +90,7 @@ class CalendarMonth extends Component {
           date={day}
           disabled={disabled}
           key={`db${(i + j)}`}
-          onTouchTap={this.handleTouchTapDay}
+         onClick={this.handleTouchTapDay}
           selected={selected}
         />
       );

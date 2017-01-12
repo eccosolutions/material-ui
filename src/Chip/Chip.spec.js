@@ -18,7 +18,7 @@ describe('<Chip />', () => {
 
   describe('state', () => {
     const wrapper = themedShallow(
-      <Chip onTouchTap={() => {}}>Label</Chip>
+      <ChiponClick={() => {}}>Label</Chip>
     );
 
     it('renders with initial state of false for clicked and focused', () => {

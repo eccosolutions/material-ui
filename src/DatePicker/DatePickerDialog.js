@@ -163,14 +163,14 @@ class DatePickerDialog extends Component {
             firstDayOfWeek={firstDayOfWeek}
             initialDate={initialDate}
             locale={locale}
-            onTouchTapDay={this.handleTouchTapDay}
+            onClickDay={this.handleTouchTapDay}
             maxDate={maxDate}
             minDate={minDate}
             mode={mode}
             open={open}
             ref="calendar"
-            onTouchTapCancel={this.handleTouchTapCancel}
-            onTouchTapOk={this.handleTouchTapOk}
+            onClickCancel={this.handleTouchTapCancel}
+            onClickOk={this.handleTouchTapOk}
             okLabel={okLabel}
             shouldDisableDate={shouldDisableDate}
           />

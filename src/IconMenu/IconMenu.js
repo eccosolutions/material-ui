@@ -91,7 +91,7 @@ class IconMenu extends Component {
      *
      * @param {object} event TouchTap event targeting the `IconButton` element.
      */
-    onTouchTap: PropTypes.func,
+    onClick: PropTypes.func,
     /**
      * If true, the `IconMenu` is opened.
      */
@@ -137,7 +137,7 @@ class IconMenu extends Component {
     onMouseEnter: () => {},
     onMouseUp: () => {},
     onRequestChange: () => {},
-    onTouchTap: () => {},
+    onClick: () => {},
     targetOrigin: {
       vertical: 'top',
       horizontal: 'left',
@@ -244,7 +244,7 @@ class IconMenu extends Component {
       onMouseEnter,
       onMouseUp,
       onRequestChange, // eslint-disable-line no-unused-vars
-      onTouchTap,
+      onClick,
       listStyle,
       menuStyle,
       style,
@@ -279,10 +279,10 @@ You should wrapped it with an <IconButton />.`);
       iconStyle: iconStyle ?
         Object.assign({}, iconStyle, iconButtonElement.props.iconStyle) :
         iconButtonElement.props.iconStyle,
-      onTouchTap: (event) => {
+      onClick: (event) => {
         this.open(Events.isKeyboard(event) ? 'keyboard' : 'iconTap', event);
-        if (iconButtonElement.props.onTouchTap) {
-          iconButtonElement.props.onTouchTap(event);
+        if (iconButtonElement.props.onClick) {
+          iconButtonElement.props.onClick(event);
         }
       },
       ref: 'iconButton',
@@ -309,7 +309,7 @@ You should wrapped it with an <IconButton />.`);
         onMouseLeave={onMouseLeave}
         onMouseEnter={onMouseEnter}
         onMouseUp={onMouseUp}
-        onClick={onTouchTap}
+        onClick={onClick}
         style={prepareStyles(mergedRootStyles)}
       >
         {iconButton}

@@ -228,7 +228,7 @@ class ListItem extends Component {
     /** @ignore */
     onTouchStart: PropTypes.func,
     /** @ignore */
-    onTouchTap: PropTypes.func,
+    onClick: PropTypes.func,
     /**
      * Control toggle state of nested list.
      */
@@ -487,12 +487,12 @@ class ListItem extends Component {
     if (iconButton && iconButton.props.onMouseUp) iconButton.props.onMouseUp(event);
   };
 
-  handleRightIconButtonTouchTap = (event) => {
+  handleRightIconButtonClick = (event) => {
     const iconButton = this.props.rightIconButton;
 
     // Stop the event from bubbling up to the list-item
     event.stopPropagation();
-    if (iconButton && iconButton.props.onTouchTap) iconButton.props.onTouchTap(event);
+    if (iconButton && iconButton.props.onClick) iconButton.props.onClick(event);
   };
 
   handleTouchStart = (event) => {
@@ -539,7 +539,7 @@ class ListItem extends Component {
       onMouseLeave, // eslint-disable-line no-unused-vars
       onNestedListToggle, // eslint-disable-line no-unused-vars
       onTouchStart, // eslint-disable-line no-unused-vars
-      onTouchTap,
+      onClick,
       rightAvatar,
       rightIcon,
       rightIconButton,
@@ -615,7 +615,7 @@ class ListItem extends Component {
         onKeyboardFocus: this.handleRightIconButtonKeyboardFocus,
         onMouseEnter: this.handleRightIconButtonMouseEnter,
         onMouseLeave: this.handleRightIconButtonMouseLeave,
-        onClick: this.handleRightIconButtonTouchTap,
+        onClick: this.handleRightIconButtonClick,
         onMouseDown: this.handleRightIconButtonMouseUp,
         onMouseUp: this.handleRightIconButtonMouseUp,
       };
@@ -684,7 +684,7 @@ class ListItem extends Component {
               onMouseEnter={this.handleMouseEnter}
               onTouchStart={this.handleTouchStart}
               onTouchEnd={this.handleTouchEnd}
-              onClick={primaryTogglesNestedList ? this.handleNestedListToggle : onTouchTap}
+              onClick={primaryTogglesNestedList ? this.handleNestedListToggle : onClick}
               ref="enhancedButton"
               style={Object.assign({}, styles.root, style)}
             >

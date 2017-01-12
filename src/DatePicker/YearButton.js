@@ -36,7 +36,7 @@ class YearButton extends Component {
      * The css class name of the root element.
      */
     className: PropTypes.string,
-    onTouchTap: PropTypes.func,
+    onClick: PropTypes.func,
     selected: PropTypes.bool,
     year: PropTypes.number.isRequired,
   };
@@ -62,8 +62,8 @@ class YearButton extends Component {
   };
 
   handleTouchTap = (event) => {
-    if (this.props.onTouchTap) {
-      this.props.onTouchTap(event, this.props.year);
+    if (this.props.onClick) {
+      this.props.onClick(event, this.props.year);
     }
   };
 
@@ -71,7 +71,7 @@ class YearButton extends Component {
     const {
       children,
       className, // eslint-disable-line no-unused-vars
-      onTouchTap, // eslint-disable-line no-unused-vars
+      onClick, // eslint-disable-line no-unused-vars
       selected, // eslint-disable-line no-unused-vars
       year, // eslint-disable-line no-unused-vars
       ...other
@@ -87,7 +87,7 @@ class YearButton extends Component {
         disableTouchRipple={true}
         onMouseEnter={this.handleMouseEnter}
         onMouseLeave={this.handleMouseLeave}
-        onTouchTap={this.handleTouchTap}
+       onClick={this.handleTouchTap}
         style={styles.root}
       >
         <span style={prepareStyles(styles.label)}>

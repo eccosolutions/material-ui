@@ -68,7 +68,6 @@ export const SnackbarBody = (props, context) => {
     contentStyle,
     message,
     open, // eslint-disable-line no-unused-vars
-    onActionTouchTap,
     onActionClick,
     style,
     ...other
@@ -81,8 +80,7 @@ export const SnackbarBody = (props, context) => {
     <FlatButton
       style={styles.action}
       label={action}
-      onTouchTap={onActionTouchTap}
-      onClick={onActionClick}
+     onClick={onActionClick}
         />
   );
 
@@ -113,12 +111,6 @@ SnackbarBody.propTypes = {
    * showing again)
    */
   message: PropTypes.node.isRequired,
-  /**
-   * Fired when the action button is touchtapped.
-   *
-   * @param {object} event Action button event.
-   */
-  onActionTouchTap: PropTypes.func,
   /**
    * Fired when the action button is clicked.
    *

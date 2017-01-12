@@ -70,12 +70,6 @@ class Snackbar extends Component {
      */
     message: PropTypes.node.isRequired,
     /**
-     * Fired when the action button is touchtapped.
-     *
-     * @param {object} event Action button event.
-     */
-    onActionTouchTap: PropTypes.func,
-    /**
      * Fired when the action button is clicked.
      *
      * @param {object} event Action button event.
@@ -209,7 +203,6 @@ class Snackbar extends Component {
       bodyStyle,
       message: messageProp, // eslint-disable-line no-unused-vars
       onRequestClose, // eslint-disable-line no-unused-vars
-      onActionTouchTap,
       onActionClick,
       style,
       ...other
@@ -232,7 +225,6 @@ class Snackbar extends Component {
             contentStyle={contentStyle}
             message={message}
             open={open}
-            onActionTouchTap={onActionTouchTap}
             onActionClick={onActionClick}
             style={bodyStyle}
           />

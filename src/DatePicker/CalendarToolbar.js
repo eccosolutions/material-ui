@@ -75,7 +75,7 @@ class CalendarToolbar extends Component {
       <div style={styles.root}>
         <IconButton
           disabled={!this.props.prevMonth}
-          onTouchTap={this.handleTouchTapPrevMonth}
+         onClick={this.handleTouchTapPrevMonth}
         >
           <NavigationChevronLeft />
         </IconButton>
@@ -89,7 +89,7 @@ class CalendarToolbar extends Component {
         </SlideInTransitionGroup>
         <IconButton
           disabled={!this.props.nextMonth}
-          onTouchTap={this.handleTouchTapNextMonth}
+         onClick={this.handleTouchTapNextMonth}
         >
           <NavigationChevronRight />
         </IconButton>

@@ -57,7 +57,7 @@ class DayButton extends Component {
     disabled: PropTypes.bool,
     locale: PropTypes.string.isRequired,
     onKeyboardFocus: PropTypes.func,
-    onTouchTap: PropTypes.func,
+    onClick: PropTypes.func,
     selected: PropTypes.bool,
   };
 
@@ -87,8 +87,8 @@ class DayButton extends Component {
   };
 
   handleTouchTap = (event) => {
-    if (!this.props.disabled && this.props.onTouchTap) {
-      this.props.onTouchTap(event, this.props.date);
+    if (!this.props.disabled && this.props.onClick) {
+      this.props.onClick(event, this.props.date);
     }
   };
 
@@ -104,7 +104,7 @@ class DayButton extends Component {
       date,
       disabled,
       locale,
-      onTouchTap, // eslint-disable-line no-unused-vars
+      onClick, // eslint-disable-line no-unused-vars
       selected, // eslint-disable-line no-unused-vars
       ...other
     } = this.props;

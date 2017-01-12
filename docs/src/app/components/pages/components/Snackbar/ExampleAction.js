@@ -20,7 +20,7 @@ export default class SnackbarExampleSimple extends React.Component {
     });
   };
 
-  handleActionTouchTap = () => {
+  handleActionClick = () => {
     this.setState({
       open: false,
     });
@@ -44,7 +44,7 @@ export default class SnackbarExampleSimple extends React.Component {
     return (
       <div>
         <RaisedButton
-          onTouchTap={this.handleTouchTap}
+          onClick={this.handleTouchTap}
           label="Add to my calendar"
         />
         <br />
@@ -58,7 +58,7 @@ export default class SnackbarExampleSimple extends React.Component {
           message={this.state.message}
           action="undo"
           autoHideDuration={this.state.autoHideDuration}
-          onActionTouchTap={this.handleActionTouchTap}
+          onActionClick={this.handleActionClick}
           onRequestClose={this.handleRequestClose}
         />
       </div>

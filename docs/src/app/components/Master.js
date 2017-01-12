@@ -169,7 +169,7 @@ class Master extends Component {
       <div>
         <Title render="Material-UI" />
         <AppBar
-          onLeftIconButtonTouchTap={this.handleTouchTapLeftIconButton}
+          onLeftIconButtonClick={this.handleTouchTapLeftIconButton}
           title={title}
           zDepth={0}
           iconElementRight={

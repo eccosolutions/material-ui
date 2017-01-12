@@ -9,7 +9,7 @@ class CalendarYear extends Component {
     locale: PropTypes.string.isRequired,
     maxDate: PropTypes.object.isRequired,
     minDate: PropTypes.object.isRequired,
-    onTouchTapYear: PropTypes.func,
+    onClickYear: PropTypes.func,
     selectedDate: PropTypes.object.isRequired,
     wordings: PropTypes.object,
   };
@@ -55,7 +55,7 @@ class CalendarYear extends Component {
       const yearButton = (
         <YearButton
           key={`yb${year}`}
-          onTouchTap={this.handleTouchTapYear}
+         onClick={this.handleTouchTapYear}
           selected={selected}
           year={year}
           {...selectedProps}
@@ -86,8 +86,8 @@ class CalendarYear extends Component {
   }
 
   handleTouchTapYear = (event, year) => {
-    if (this.props.onTouchTapYear) {
-      this.props.onTouchTapYear(event, year);
+    if (this.props.onClickYear) {
+      this.props.onClickYear(event, year);
     }
   };
 

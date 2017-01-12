@@ -42,7 +42,7 @@ describe('<EnhancedButton />', () => {
     assert.ok(wrapper.contains(testChildren), 'should contain the children');
   });
 
-  it('renders a disabled button when disabled={true} which blocks onTouchTap from firing', () => {
+  it('renders a disabled button when disabled={true} which blocks onClick from firing', () => {
     const wrapper = shallowWithContext(
       <EnhancedButton disabled={true}>Button</EnhancedButton>
     );
@@ -53,7 +53,7 @@ describe('<EnhancedButton />', () => {
     let touched = false;
     wrapper.setProps({
       onClick: () => clicked = true,
-      onTouchTap: () => touched = true,
+      onClick: () => touched = true,
     });
     wrapper.simulate('click');
     wrapper.simulate('touchTap');
@@ -61,7 +61,7 @@ describe('<EnhancedButton />', () => {
     assert.strictEqual(touched, false, 'should not trigger the touchTap');
   });
 
-  it('renders a dummy link button when disabled={true} which blocks onTouchTap from firing', () => {
+  it('renders a dummy link button when disabled={true} which blocks onClick from firing', () => {
     const wrapper = shallowWithContext(
       <EnhancedButton
         disabled={true}
@@ -78,7 +78,7 @@ describe('<EnhancedButton />', () => {
     let touched = false;
     wrapper.setProps({
       onClick: () => clicked = true,
-      onTouchTap: () => touched = true,
+      onClick: () => touched = true,
     });
     wrapper.simulate('click');
     wrapper.simulate('touchTap');
@@ -296,7 +296,7 @@ describe('<EnhancedButton />', () => {
     const wrapper = shallowWithContext(
       <EnhancedButton
         keyboardFocused={true}
-        onTouchTap={() => eventStack.push('touchTap')}
+       onClick={() => eventStack.push('touchTap')}
       >
         Button
       </EnhancedButton>

@@ -8,7 +8,7 @@ import {createHashHistory} from 'history';
 window.React = React;
 window.Perf = require('react-addons-perf');
 
-// Needed for onTouchTap
+// Needed for onClick
 // http://stackoverflow.com/a/34015469/988941
 // injectTapEventPlugin();
 
